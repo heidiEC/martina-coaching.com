@@ -628,6 +628,167 @@
       transform: rotate(-45deg);
     }
 
+    /* ---------- Packages ---------- */
+    .packages {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 980px) {
+      .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .package {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 32px 28px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+    }
+
+    .package:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168, 99, 68, 0.32);
+      box-shadow: 0 28px 48px -32px rgba(43, 31, 23, 0.28);
+    }
+
+    .package.featured {
+      background: linear-gradient(180deg, var(--cream) 0%, #FBEFE3 100%);
+      border-color: rgba(200, 128, 94, 0.35);
+      box-shadow: 0 30px 50px -36px rgba(168, 99, 68, 0.35);
+    }
+
+    .package-head {
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+
+    .package-tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--clay-deep);
+      font-weight: 500;
+      padding: 5px 10px;
+      background: rgba(200, 128, 94, 0.12);
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .package h3 {
+      font-family: var(--f-display);
+      font-weight: 400;
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .package-vibe {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .package-list {
+      list-style: none;
+      margin: 0 0 24px;
+      padding: 0;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      flex-grow: 1;
+    }
+
+    .package-list li {
+      padding: 8px 0 8px 22px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .package-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 15px;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid var(--clay-deep);
+      border-bottom: 1px solid var(--clay-deep);
+      transform: rotate(-45deg);
+    }
+
+    .package-price {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .package .price {
+      font-family: var(--f-display);
+      font-weight: 400;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .package .price-note {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      letter-spacing: 0.02em;
+      text-align: right;
+    }
+
+    .packages-footnote {
+      margin: 56px auto 0;
+      max-width: 60ch;
+      text-align: center;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+
+    .packages-footnote p {
+      margin: 0 0 12px;
+    }
+
+    .packages-footnote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .packages-footnote a {
+      color: var(--clay-deep);
+      border-bottom: 1px solid rgba(168, 99, 68, 0.3);
+      transition: border-color 0.2s var(--ease);
+    }
+
+    .packages-footnote a:hover {
+      border-bottom-color: var(--clay-deep);
+    }
+
     /* ---------- Approach / Quote ---------- */
     .approach {
       background: var(--ink);
@@ -1049,7 +1210,7 @@
       <nav aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
           <li><a href="#process">Approach</a></li>
           <li><a href="#testimonials">Kind Words</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1094,7 +1255,7 @@
             <path d="M3 7l9 6 9-6" />
           </svg>
         </a>
-        <a href="#services" class="btn btn-ghost">
+        <a href="#packages" class="btn btn-ghost">
           Explore the work
           <span class="arrow">→</span>
         </a>
@@ -1132,9 +1293,10 @@
           <p>
             I work with thoughtful people who are ready for a change they can
             feel — career shifts, relationship patterns, confidence, habits,
-            self-worth. Sessions blend coaching conversation with NLP, guided
-            meditation, and gentle hypnotic-style relaxation, so the shifts
-            land where they matter: not just in your head, but in your body.
+            self-worth. Sessions blend coaching conversation with NLP
+            techniques — reframes, guided visualization, and hypnotic-style
+            relaxation — so the shifts land where they matter: not just in
+            your head, but in your body.
           </p>
           <p>
             You don't have to arrive sure of anything. You just have to arrive
@@ -1222,85 +1384,138 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- PACKAGES -->
+  <section id="packages" class="packages">
     <div class="wrap">
       <div class="section-head">
-        <p class="section-label reveal">Ways to work together</p>
-        <h2 class="reveal">Deep coaching that <em>guides you toward your desire</em> — three ways in.</h2>
+        <p class="section-label reveal">Your transformation journey</p>
+        <h2 class="reveal">Choose the level of support that <em>feels right</em> for where you are right now.</h2>
       </div>
 
-      <div class="services-grid">
-        <article class="service reveal">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 36l8-20 8 10 6-14 10 24" />
-            <circle cx="16" cy="16" r="2" />
-            <circle cx="30" cy="12" r="2" />
-          </svg>
-          <span class="service-tag">Single session</span>
-          <h3>NLP Session</h3>
-          <p>
-            A focused, standalone session using NLP techniques, with a gentle
-            undercurrent of hypnotic-style relaxation woven throughout — so
-            change settles in quietly, not just intellectually.
-          </p>
-          <ul>
-            <li>One specific block or goal</li>
-            <li>NLP with soft, meditative relaxation</li>
+      <div class="packages-grid">
+        <article class="package reveal">
+          <div class="package-head">
+            <span class="package-tag">Try it</span>
+            <h3>Single Session</h3>
+            <p class="package-vibe">One focused session to test the water.</p>
+          </div>
+          <ul class="package-list">
+            <li>1 private session</li>
+            <li>NLP techniques + guided meditation</li>
             <li>In person or online</li>
           </ul>
+          <div class="package-price">
+            <span class="price">$150</span>
+            <span class="price-note">single session</span>
+          </div>
         </article>
 
-        <article class="service reveal featured">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="24" cy="24" r="16" />
-            <path d="M16 24c2-6 14-6 16 0" />
-            <path d="M16 24c2 6 14 6 16 0" />
-            <circle cx="24" cy="24" r="2" fill="currentColor" />
-          </svg>
-          <span class="service-tag">Most chosen</span>
-          <h3>Coaching Packages</h3>
-          <p>
-            A series of sessions designed to carry you from limiting beliefs
-            toward what you actually desire — career, confidence, relationships,
-            self-worth. Structured, but always shaped around you.
-          </p>
-          <ul>
-            <li>4, 6, or 10-session packages</li>
-            <li>Coaching + NLP + guided meditation blend</li>
-            <li>Practices between sessions</li>
+        <article class="package reveal">
+          <div class="package-head">
+            <span class="package-tag">1-Month</span>
+            <h3>Rewire</h3>
+            <p class="package-vibe">Master your money mindset. Identify limiting beliefs and replace them with more
+              empowering ones.</p>
+          </div>
+          <ul class="package-list">
+            <li>4 private sessions (over 1 month)</li>
+            <li>1 personalized guided-meditation recording</li>
+            <li>Email support between sessions</li>
           </ul>
+          <div class="package-price">
+            <span class="price">$550</span>
+            <span class="price-note">4 sessions</span>
+          </div>
         </article>
 
-        <article class="service reveal">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M24 8c-8 0-14 6-14 14 0 6 4 10 8 12v6h12v-6c4-2 8-6 8-12 0-8-6-14-14-14z" />
-            <path d="M20 40h8" />
-            <path d="M24 22v6" />
-          </svg>
-          <span class="service-tag">Deep work</span>
-          <h3>Guided Meditation &amp; Visualization</h3>
-          <p>
-            Calm, guided sessions that use meditation and hypnotic-style
-            relaxation to help the deeper part of you loosen old stories and
-            try on new ones. A supportive complement to NLP coaching for
-            confidence, focus, habits, and everyday stress.
-          </p>
-          <ul>
-            <li>Single sessions or series</li>
-            <li>Tailored guided scripts</li>
-            <li>Recording to take home</li>
+        <article class="package reveal">
+          <div class="package-head">
+            <span class="package-tag">3-Month</span>
+            <h3>Reset</h3>
+            <p class="package-vibe">Clarity. Release. A powerful shift forward — for a singular issue you're ready to
+              move through.</p>
+          </div>
+          <ul class="package-list">
+            <li>6 private sessions (2 per month)</li>
+            <li>1 personalized guided-meditation recording</li>
+            <li>Email support between sessions</li>
           </ul>
+          <div class="package-price">
+            <span class="price">$1,800</span>
+            <span class="price-note">6 sessions</span>
+          </div>
+        </article>
+
+        <article class="package reveal featured">
+          <div class="package-head">
+            <span class="package-tag">6-Month · Most chosen</span>
+            <h3>Transformation</h3>
+            <p class="package-vibe">Rewire patterns. Build confidence. Create lasting change — go deeper and shift the
+              internal patterns that keep repeating.</p>
+          </div>
+          <ul class="package-list">
+            <li>12 private sessions</li>
+            <li>2 custom guided-meditation recordings</li>
+            <li>Voice-note support between sessions</li>
+            <li>Accountability &amp; integration guidance</li>
+          </ul>
+          <div class="package-price">
+            <span class="price">$3,420</span>
+            <span class="price-note">12 sessions · 5% saved</span>
+          </div>
+        </article>
+
+        <article class="package reveal">
+          <div class="package-head">
+            <span class="package-tag">9-Month</span>
+            <h3>Integration</h3>
+            <p class="package-vibe">Step into a new way of living and being — where transformation becomes your new
+              normal, not just something you visit.</p>
+          </div>
+          <ul class="package-list">
+            <li>18 private sessions</li>
+            <li>Ongoing support + priority scheduling</li>
+            <li>Monthly progress reflections</li>
+            <li>Deeper NLP &amp; subconscious work</li>
+          </ul>
+          <div class="package-price">
+            <span class="price">$5,022</span>
+            <span class="price-note">18 sessions · 7% saved</span>
+          </div>
+        </article>
+
+        <article class="package reveal">
+          <div class="package-head">
+            <span class="package-tag">12-Month · Deep work</span>
+            <h3>Mastery</h3>
+            <p class="package-vibe">Your next-level self — fully embodied. A powerful long-term container for
+              identity-level transformation and sustained growth.</p>
+          </div>
+          <ul class="package-list">
+            <li>24 private sessions</li>
+            <li>Multiple personalized guided-meditation recordings</li>
+            <li>Unlimited (within reason) voice/text support</li>
+            <li>Flexible scheduling</li>
+            <li>Quarterly deep-dive sessions</li>
+          </ul>
+          <div class="package-price">
+            <span class="price">$6,480</span>
+            <span class="price-note">24 sessions · 10% saved</span>
+          </div>
         </article>
       </div>
 
-      <p class="services-note reveal">
-        All services are available <strong>in person and online</strong>.
-        Not sure which fits? A free discovery call is the easiest way to find out.
-      </p>
+      <div class="packages-footnote reveal">
+        <p>
+          <strong>24-hour cancellation policy.</strong> Sessions cancelled or rescheduled with less than 24 hours'
+          notice may be charged in full. See the
+          <a href="terms.html">full terms &amp; disclaimer</a> for details.
+        </p>
+        <p>
+          A brief <a href="waiver.html" target="_blank" rel="noopener">liability waiver &amp; informed consent form
+            (PDF)</a> is signed before the first session.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -1371,12 +1586,12 @@
               fill="currentColor" />
           </svg>
           <blockquote class="t-quote">
-            Martina has been a fantastic addition to my toolbox in helping me work through PTSD after a car accident I
-            experienced about a year and a half ago.
+            Martina has been a fantastic addition to my toolbox in helping me work through what came up after a car
+            accident I experienced about a year and a half ago.
           </blockquote>
           <figcaption class="t-by">
             <span class="t-name">AL</span>
-            <span class="t-role">Coaching package · career shift</span>
+            <span class="t-role">NLP Coaching · Fear &amp; confidence</span>
           </figcaption>
         </figure>
 
@@ -1386,13 +1601,19 @@
               fill="currentColor" />
           </svg>
           <blockquote class="t-quote">
-            Martina has this quiet way of making you feel completely safe. The
-            guided-meditation part surprised me — I expected it to feel
-            strange, and instead it felt like coming home to myself.
+            Working with Martina has been a truly valuable investment in my
+            personal and professional growth. I chose a coaching package
+            because consistency and accountability matter to me — and Martina
+            delivers exactly that. What stood out most was her dedication and
+            intuition: the evening before an important presentation, she sent
+            me a personalized meditation recording. This thoughtful, timely
+            support helped me release my resistance, shift my mindset, and
+            step into confidence and clarity. The impact was immediate — I
+            felt prepared, empowered, and fully capable.
           </blockquote>
           <figcaption class="t-by">
-            <span class="t-name">Sofia M.</span>
-            <span class="t-role">NLP session · confidence</span>
+            <span class="t-name">TU</span>
+            <span class="t-role">Coaching Package · Career &amp; life changes</span>
           </figcaption>
         </figure>
 
@@ -1408,7 +1629,7 @@
           </blockquote>
           <figcaption class="t-by">
             <span class="t-name">RD</span>
-            <span class="t-role">Coaching package · focus &amp; sleep</span>
+            <span class="t-role">NLP Coaching · Fear management</span>
           </figcaption>
         </figure>
 
@@ -1422,7 +1643,7 @@
           </blockquote>
           <figcaption class="t-by">
             <span class="t-name">AA</span>
-            <span class="t-role">Guided meditation · relationship patterns</span>
+            <span class="t-role">Coaching Package · Career, relationships, meditation</span>
           </figcaption>
         </figure>
       </div>
@@ -1462,6 +1683,7 @@
         <a href="#">Instagram</a>
         <a href="#">LinkedIn</a>
         <a href="mailto:hello@martinacoaching.com">Email</a>
+        <a href="waiver.html">Waiver</a>
         <a href="terms.html">Terms &amp; Disclaimer</a>
       </div>
     </div>
