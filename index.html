@@ -265,6 +265,14 @@
       margin: 0 0 40px;
     }
 
+    .hero-lede p {
+      margin: 0 0 14px;
+    }
+
+    .hero-lede p:last-child {
+      margin-bottom: 0;
+    }
+
     .hero-lede em {
       font-family: var(--f-display);
       font-style: italic;
@@ -628,6 +636,36 @@
       transform: rotate(-45deg);
     }
 
+    /* ---------- How I can help ---------- */
+    .help-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .help-grid .service {
+      padding: 32px 24px 28px;
+    }
+
+    .help-grid .service h3 {
+      font-size: 22px;
+    }
+
+    .help-grid .service p {
+      margin: 0;
+    }
+
+    @media (max-width: 1100px) {
+      .help-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .help-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ---------- Packages ---------- */
     .packages {
       background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
@@ -760,6 +798,32 @@
       color: var(--ink-muted);
       letter-spacing: 0.02em;
       text-align: right;
+    }
+
+    .packages-cta {
+      margin: 64px auto 0;
+      max-width: 60ch;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .packages-cta p {
+      margin: 0 0 12px;
+    }
+
+    .packages-cta .packages-details {
+      font-size: 17px;
+      color: var(--ink);
+    }
+
+    .packages-cta .packages-details strong {
+      font-weight: 500;
+    }
+
+    .packages-cta .btn {
+      margin-top: 12px;
     }
 
     .packages-footnote {
@@ -1229,15 +1293,30 @@
       <h1 class="hero-title reveal">
         <em>step into</em> the life you're ready for.
       </h1>
-      <p class="hero-lede reveal">
-        I'm Martina — founder of <em>Innershift</em> and a life success coach
-        and Certified NLP Practitioner. I weave in guided meditation and
-        hypnotic-style relaxation so the work lands more deeply. Here's what
-        I know to be true: you already have everything you need. My work is
-        simply to help you clear the way — so the part of you that already
-        knows what she wants can finally be heard, and trusted. Available in
-        person and online. Schedule a free 15 minute discovery call or book your one-on-one session.
-      </p>
+      <div class="hero-lede reveal">
+        <p>
+          I'm Martina — Founder of <em>Innershift</em>, Life Success Coach, and
+          Certified NLP Practitioner.
+        </p>
+        <p>
+          Through personalized coaching, guided meditation, and hypnotic-style
+          relaxation, I help you move beyond limiting beliefs, reconnect with
+          your inner strengths, and create meaningful, lasting change.
+        </p>
+        <p>
+          I believe you already possess the potential to build a life that
+          feels authentic, fulfilling, and truly your own. My role is to help
+          you find clarity, trust your inner voice, and move forward with
+          confidence.
+        </p>
+        <p>
+          Sessions are available in person and online.
+        </p>
+        <p>
+          Ready to take the next step? Schedule a complimentary 15-minute
+          discovery call or book your private one-on-one coaching session.
+        </p>
+      </div>
       <div class="cta-row reveal">
         <a href="https://calendly.com/hello-martinacoaching/one-on-one-nlp-coaching" target="_blank" rel="noopener"
           class="btn btn-primary">
@@ -1287,7 +1366,7 @@
         <div class="about-prose reveal">
           <p>
             Everything you're looking for is already in you — not as a cliché,
-            as a fact. What's often missing is the quiet to notice it, and
+            but as a fact. What's often missing is the quiet to notice it, and
             someone who knows how to help you find your way back.
           </p>
           <p>
@@ -1308,6 +1387,39 @@
             <span class="credential">Guided Meditation &amp; Relaxation</span>
             <span class="credential">Life &amp; Success Coaching</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I CAN HELP -->
+  <section class="help" id="help" style="padding-top: 40px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-label reveal">Areas of focus</p>
+        <h2 class="reveal">How Can I <em>Help You?</em></h2>
+      </div>
+
+      <div class="services-grid help-grid">
+        <div class="service reveal">
+          <h3>Confidence</h3>
+          <p>Trust yourself, speak up, and show up as who you really are.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Personal growth</h3>
+          <p>Get clear on what you want and build the habits that move you toward it.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Major life transitions</h3>
+          <p>Navigate career changes, moves, and new chapters with steadiness.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Relationships</h3>
+          <p>Recognize old patterns and create healthier ways of connecting.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Overcoming self-doubt</h3>
+          <p>Quiet the inner critic and replace limiting beliefs with empowering ones.</p>
         </div>
       </div>
     </div>
@@ -1397,10 +1509,10 @@
           <div class="package-head">
             <span class="package-tag">Try it</span>
             <h3>Single Session</h3>
-            <p class="package-vibe">One focused session to test the water.</p>
+            <p class="package-vibe">One focused session to test the waters.</p>
           </div>
           <ul class="package-list">
-            <li>1 private session</li>
+            <li>1 private 55-minute session</li>
             <li>NLP techniques + guided meditation</li>
             <li>In person or online</li>
           </ul>
@@ -1432,8 +1544,7 @@
           <div class="package-head">
             <span class="package-tag">3-Month</span>
             <h3>Reset</h3>
-            <p class="package-vibe">Clarity. Release. A powerful shift forward — for a singular issue you're ready to
-              move through.</p>
+            <p class="package-vibe">Gain clarity, release limiting beliefs, and move forward with confidence.</p>
           </div>
           <ul class="package-list">
             <li>6 private sessions (2 per month)</li>
@@ -1505,6 +1616,21 @@
         </article>
       </div>
 
+      <div class="packages-cta reveal">
+        <p class="packages-details">
+          <strong>Every session is 55 minutes.</strong> Package sessions are valid for one year from purchase.
+        </p>
+        <p>Not sure which option is right for you? Start with a complimentary 15-minute call.</p>
+        <!-- TODO: replace href="#" with the new discovery-call calendar link -->
+        <a href="#" target="_blank" rel="noopener" class="btn btn-primary">
+          Book a FREE Discovery Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
       <div class="packages-footnote reveal">
         <p>
           <strong>24-hour cancellation policy.</strong> Sessions cancelled or rescheduled with less than 24 hours'
@@ -1544,25 +1670,25 @@
 
       <div class="process-list">
         <div class="process-item reveal">
-          <div class="process-num">i.</div>
+          <div class="process-num">I.</div>
           <h3>A free discovery call</h3>
-          <p>Fifteen minutes, no expectations. A soft first conversation so you can feel whether this is right for you —
+          <p>Fifteen minutes, no expectations. A relaxed, introductory conversation so you can feel whether this is right for you —
             because that matters.</p>
         </div>
         <div class="process-item reveal">
-          <div class="process-num">ii.</div>
+          <div class="process-num">II.</div>
           <h3>A path built around you</h3>
-          <p>Not a template. You already know what you're moving toward; together we map a path that fits — coaching,
-            NLP, guided meditation, or a blend.</p>
+          <p>No one-size-fits-all approach. Together, we'll explore your goals and create a personalized path forward,
+            using coaching, NLP techniques, guided meditation, or a combination of approaches.</p>
         </div>
         <div class="process-item reveal">
-          <div class="process-num">iii.</div>
+          <div class="process-num">III.</div>
           <h3>Sessions that land</h3>
           <p>Warm, focused hours where something real shifts — often something you already half-knew was waiting to be
             heard.</p>
         </div>
         <div class="process-item reveal">
-          <div class="process-num">iv.</div>
+          <div class="process-num">IV.</div>
           <h3>Change that settles in</h3>
           <p>Between sessions, small practices help the shift take root in your body — so what you've already discovered
             stays yours to keep.</p>
@@ -1586,8 +1712,8 @@
               fill="currentColor" />
           </svg>
           <blockquote class="t-quote">
-            Martina has been a fantastic addition to my toolbox in helping me work through what came up after a car
-            accident I experienced about a year and a half ago.
+            Martina has been a fantastic addition to my personal toolbox, helping me work through the challenges I
+            experienced following a car accident about a year and a half ago.
           </blockquote>
           <figcaption class="t-by">
             <span class="t-name">AL</span>
@@ -1605,7 +1731,7 @@
             personal and professional growth. I chose a coaching package
             because consistency and accountability matter to me — and Martina
             delivers exactly that. What stood out most was her dedication and
-            intuition: the evening before an important presentation, she sent
+            intuition. The evening before an important presentation, she sent
             me a personalized meditation recording. This thoughtful, timely
             support helped me release my resistance, shift my mindset, and
             step into confidence and clarity. The impact was immediate — I
